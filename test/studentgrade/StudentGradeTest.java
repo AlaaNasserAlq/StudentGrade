@@ -41,7 +41,7 @@ public class StudentGradeTest {
     }
 
     /**
-     * Test of getGrade(A, B, C, F) methods of class StudentGrade.
+     * Test of getGrade(A, B, C, D, F) methods of class StudentGrade.
      */
     @Test
     public void testGetGrade95() {
@@ -69,7 +69,16 @@ public class StudentGradeTest {
        actualResult = StudentGrade.getGrade(mark);
        assertEquals(expectedResult, actualResult);
     }
-
+    
+    @Test
+    public void testGetGrade65() {
+       System.out.println("65");
+       mark = 65;
+       expectedResult = "D";
+       actualResult = StudentGrade.getGrade(mark);
+       assertEquals(expectedResult, actualResult);
+    }
+    
     @Test
     public void testGetGrade55() {
        System.out.println("55");
